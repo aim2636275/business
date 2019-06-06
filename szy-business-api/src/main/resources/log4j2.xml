@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration status="OFF">
+	<appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d [%X{applicationName}] [%X{traceId}] [%X{spanName}] [%X{userInfo}] [%t] [%-5level] [%c{36}] %M %L - %msg%xEx%n"/>
+		</Console>
+		<RollingFile name="ROLLING" fileName="logs/stdout.log"
+					 filePattern="logs/stdout.%d{yyyy-MM-dd}.log.gz">
+			<PatternLayout pattern="%d [%X{traceId}] [%X{userInfo}] [%t] [%-5level] [%c{36}] %M %L - %msg%xEx%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+			</Policies>
+			<DefaultRolloverStrategy max="20"/>
+		</RollingFile>
+	</appenders>
+
+	<loggers>
+		<Root level="info">
+			<AppenderRef ref="CONSOLE"/>
+			<appender-ref ref="ROLLING"/>
+		</Root>
+	</loggers>
+</configuration>
