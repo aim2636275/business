@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Scope;
  * Created by sunzhiyuan on 2019/6/5.
  */
 @Configuration
-@EnableAutoConfiguration
 public class AppConfig {
 
     @Bean @Scope("prototype")

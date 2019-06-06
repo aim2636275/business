@@ -18,7 +18,6 @@ import java.time.format.DateTimeFormatter;
  * Created by sunzhiyuan on 2019/6/5.
  */
 @Configuration
-@EnableAutoConfiguration
 public class MvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageSource messageSource;
