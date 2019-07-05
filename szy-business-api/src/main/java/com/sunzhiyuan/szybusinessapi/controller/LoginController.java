@@ -12,9 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/business/login")
 public class LoginController extends BaseController {
 
+    /**
+     * 登录
+     * @return
+     */
     @RequestMapping("/login")
     public ResponseBean login() {
         return getResponseBean().setCode(ResponseCodeEnum.SUCCESS);
     }
+
+    /**
+     * 注册
+     * @return
+     */
+    @RequestMapping("/signUp")
+    public ResponseBean signUp() {
+        return getResponseBean().setCode(ResponseCodeEnum.SUCCESS);
+    }
+
 
 }
