@@ -11,7 +11,7 @@ public interface UserInfoService {
 
     Boolean updateUser(UserInfoDTO userInfo);
 
-    UserInfoDTO queryUserByid(Long userId);
+    UserInfoDTO queryUserById(Long userId);
 
     UserInfoDTO queryUserByMobile(String mobile);
 

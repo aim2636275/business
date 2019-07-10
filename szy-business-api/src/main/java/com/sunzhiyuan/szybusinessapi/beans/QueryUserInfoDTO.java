@@ -3,13 +3,13 @@ package com.sunzhiyuan.szybusinessapi.beans;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
- * Created by sunzhiyuan on 2019/7/9.
+ * Created by sunzhiyuan on 2019/7/10.
+ * 查询用户信息请求参数bean
  */
 @Data
-public class UserInfoDTO implements Serializable {
+public class QueryUserInfoDTO implements Serializable{
     private Long id;
 
     /**
@@ -36,7 +36,4 @@ public class UserInfoDTO implements Serializable {
      * 银行卡类型
      */
     private Integer bankCardType;
-
-    private Date createTime;
-    private Date updateTime;
 }

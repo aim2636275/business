@@ -1,5 +1,6 @@
 package com.sunzhiyuan.szybusinessapi.orm.mybatis.mappers;
 
+import com.sunzhiyuan.szybusinessapi.beans.QueryUserInfoDTO;
 import com.sunzhiyuan.szybusinessapi.orm.mybatis.entity.UserInfoDO;
 
 /**
@@ -10,5 +11,5 @@ public interface UserInfoMapper {
 
     Boolean updateUser(UserInfoDO userInfo);
 
-    UserInfoDO queryUser(UserInfoDO userInfo);
+    UserInfoDO queryUser(QueryUserInfoDTO userInfo);
 }
